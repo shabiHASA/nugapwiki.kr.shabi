@@ -1,0 +1,1 @@
+# nugapwiki.kr.shabi
