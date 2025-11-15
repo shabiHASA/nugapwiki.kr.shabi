@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shabi - 누갭위키</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", sans-serif;
+            background-color: #fff;
+            color: #181818;
+            line-height: 1.6;
+        }
+        
+        .header {
+            background-color: #1b9c4e;
+            padding: 12px 20px;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+        
+        .title {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #1b9c4e;
+            padding-bottom: 10px;
+        }
+        
+        .info-box {
+            float: right;
+            width: 300px;
+            border: 1px solid #ddd;
+            margin: 0 0 20px 20px;
+            background-color: #f8f9fa;
+        }
+        
+        .info-box-title {
+            background-color: #1b9c4e;
+            color: white;
+            padding: 10px;
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        .info-box-content {
+            padding: 15px;
+        }
+        
+        .info-image {
+            width: 100%;
+            height: 250px;
+            background-color: #e9ecef;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .info-row {
+            display: flex;
+            border-bottom: 1px solid #eee;
+            padding: 8px 0;
+        }
+        
+        .info-label {
+            font-weight: bold;
+            width: 100px;
+            flex-shrink: 0;
+            color: #555;
+        }
+        
+        .info-value {
+            flex: 1;
+        }
+        
+        .section {
+            margin: 30px 0;
+        }
+        
+        .section-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 25px 0 15px 0;
+            padding-left: 10px;
+            border-left: 4px solid #1b9c4e;
+        }
+        
+        .subsection-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 20px 0 10px 0;
+            padding-left: 8px;
+            border-left: 3px solid #66bb6a;
+        }
+        
+        .content p {
+            margin: 12px 0;
+            text-align: justify;
+        }
+        
+        .censored {
+            background-color: #000;
+            color: #000;
+            padding: 2px 8px;
+            cursor: not-allowed;
+            user-select: none;
+        }
+        
+        .censored:hover {
+            background-color: #333;
+        }
+        
+        .warning {
+            background-color: #fff3cd;
+            border: 1px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .warning-title {
+            font-weight: bold;
+            color: #856404;
+            margin-bottom: 8px;
+        }
+        
+        .footnote {
+            font-size: 13px;
+            color: #666;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+        
+        .footnote-item {
+            margin: 8px 0;
+        }
+        
+        .footnote-link {
+            color: #1b9c4e;
+            text-decoration: none;
+        }
+        
+        .footnote-link:hover {
+            text-decoration: underline;
+        }
+        
+        a {
+            color: #1b9c4e;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        .toc {
+            background-color: #f8f9fa;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 20px 0;
+            width: fit-content;
+        }
+        
+        .toc-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        
+        .toc ul {
+            list-style: none;
+            padding-left: 20px;
+        }
+        
+        .toc li {
+            margin: 5px 0;
+        }
+        
+        .disturbing-hint {
+            opacity: 0.95;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        nugapwiki
+    </div>
+    
+    <div class="container">
+        <div class="title">Shabi</div>
+        
+        <div class="info-box">
+            <div class="info-box-title">Shabi</div>
+            <div class="info-box-content">
+                <div class="info-image">
+                    <!-- 여기에 이미지를 넣으세요 -->
+                    <!-- 사용 예: <img src="shabi.jpg" alt="Shabi" style="width:100%;height:100%;object-fit:cover;"> -->
+                    이미지 업로드 공간
+                </div>
+                <div class="info-row">
+                    <div class="info-label">본명</div>
+                    <div class="info-value"><span class="censored">알 수 없음</span></div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">성별</div>
+                    <div class="info-value">트트트트젠(현 남성)<sup>[1]</sup></div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">출생</div>
+                    <div class="info-value"><span class="censored">1981년 11월 31일 (44세)</span></div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">거주지</div>
+                    <div class="info-value"><span class="censored">조선민주주의인민공화국 함경</span>북도</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">신체</div>
+                    <div class="info-value">-145cm, 470kg</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">학력</div>
+                    <div class="info-value">좀비고등학교 (5기 졸업)<br><span class="censored">김일성종합대학</span> (재학)</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">직업</div>
+                    <div class="info-value">샤비 히키 정병 수용소 운영<br>샤비의 낙원 소유주</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="warning">
+            <div class="warning-title">⚠️ 주의</div>
+            이 문서는 <span class="censored">식인 및 사이비 종교</span>에 관한 내용을 포함하고 있습니다. 열람 시 주의가 필요합니다.
+        </div>
+        
+        <div class="toc">
+            <div class="toc-title">목차</div>
+            <ul>
+                <li>1. 개요</li>
+                <li>2. 특징</li>
+                <li>3. 생활 패턴</li>
+                <li>4. 학력 및 경력</li>
+                <li>5. 운영 시설</li>
+                <li>6. <span class="censored">사이비 종교와의 연관성</span></li>
+                <li>7. 논란 및 사건</li>
+                <li>8. 낙원 운영의 진실</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">1. 개요</div>
+            <div class="content">
+                <p><b>Shabi</b>(샤비)는 <span class="censored">조선민주주의인민공화국 함경북도 함릉시</span>에 거주하는 것으로 알려진 인물이다. 대외적으로는 미소녀 여고생으로 알려져 있으나, 실제 정체는 <span class="censored">44세의 남성으로 확인</span>되었다.</p>
+                <p>샤비 히키 정병 수용소의 <span class="censored">낙원인</span>이자 '샤비의 낙원'의 소유주로서 활동하고 있다.</p>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">2. 특징</div>
+            <div class="content">
+                <p>대외적 이미지와 실제 모습 사이에 극명한 차이가 존재한다. 외부에서는 18세의 초 미소녀 여고생으로 알려져 있으나, <span class="censored">이는 ai로 생성되었으며</span> 실체는 일반적 예상과는 상당히 다르다.</p>
+                <p>신체 특징으로는 키 -145cm<sup>[2]</sup>, 몸무게 470kg이라는 기록이 남아있다. 이 수치에 대해서는 여러 해석이 존재하지만 현재까지 가장 유력한 설은 <span class="censored">매장설</span>이다.</p>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">3. 생활 패턴</div>
+            <div class="content">
+                <p class="disturbing-hint">특이하게도 하루가 72시간으로 구성되어 있다고 주장한다. 이 중 24시간은 휴대폰을 보는 데 사용하며, 나머지 48시간은 <span class="censored">똥싸고 옾챗</span>하는 데 할애한다고 한다.</p>
+                <p>일상의 대부분을 <span class="censored">옾챗</span>에서 보내는 것으로 알려져 있으며, <span class="censored">초능력</span>과 관련된 활동을 주로 한다.</p>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">4. 학력 및 경력</div>
+            <div class="content">
+                <div class="subsection-title">4.1. 학력</div>
+                <p><b>좀비고등학교</b> 5기를 졸업했으며, 현재 <span class="censored">김일성종합대학</span>에 재학 중이다. 좀비고등학교의 교육 과정과 <span class="censored">김일성종합대학</span>에 대해서는 자세한 정보가 공개되지 않았다.</p>
+                <div class="subsection-title">4.2. 유급</div>
+                <p>국민학교 재학 중 유급을 당해 11년 꿇었으며, 9수 끝에  <span class="censored">김일성종합대학</span>에 입학했다. 그러나 대학 재학 중인 현재까지도 쌓기 블록에 대한 개념이 부족한 것으로 보아 현 초등 6학년 과정부터의 복습이 필요하다는 분석도 있다.</p>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">5. 운영 시설</div>
+            <div class="content">
+                <p>샤비 히키 정병 수용소와 샤비의 낙원을 운영하고 있다. 이 시설들의 정확한 위치와 운영 목적에 대해서는 <span class="censored">낙원으로가야하므</span>로 인해 확인이 불가능하다.</p>
+                <p>'낙원'이라는 명칭이 붙어있으나, <span class="censored">히키 정병 수용소의 수감자</span>들의 증언에 따르면 실제로는 <span class="censored">식량을 비급해둔 창고</span>라는 의혹이 제기되고 있다.</p>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">6. <span class="censored">사이비 종교와의 연관성</span></div>
+            <div class="content">
+                <p><span class="censored">샤비 히키 정병 수용소와 샤비의 낙원은 사이비 종교와는 연관되어있지 않으며 수감자와 낙원인 개개인의 종교에 제한을 두지 않습니다.</span></p>
+                <p><span class="censored">샤비 히키 정병 수용소와 샤비의 낙원은 개개인의 사상을 존중해</span></p>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">7. 논란 및 사건</div>
+            <div class="content">
+                <div class="subsection-title">7.1. HASA <span class="censored">사망</span> 사건</div>
+                <p class="disturbing-hint"><span class="censored">████년 ██월</span>, HASA라는 인물과 관련된 사건이 발생했다. 이 사건은 <span class="censored">식인</span>으로 추정되는 흔적으로 인해 화제가 되었으나, <span class="censored">샤비의 낙원과의 연관성</span>때문에 구체적 내용이 공개되지 않았다.</p>
+                <p>다만 일부 <span class="censored">도난당</span>한 기록에 따르면 <span class="censored">사라진 낙원인의 행방</span>과 관련이 있는 것으로 추정된다.<sup>[3]</sup></p>
+                
+                <div class="warning">
+                    <div class="warning-title">⚠ 주의</div>
+                    이 문단은 등록되지 않은 ip에 의해 수정되었습니다.
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">8. 낙원 운영의 진실</div>
+            <div class="content">
+                <p>샤비가 '낙원'을 운영하는 이유에 대해서는 다양한 추측이 존재한다.</p>
+                
+                <div class="warning" style="background-color: #1a1a1a; border-color: #000; color: #fff;">
+                    <div class="warning-title" style="color: #ff4444;">⚠ 열람 불가</div>
+                    <p style="margin: 10px 0;">
+                        <span class="censored">마주해선안돼 마주해선안돼 마주해선안돼 마주해선안돼</span>
+                    <p style="margin: 10px 0;">
+                        <span class="censored">마주해선안돼 마주해선안돼 마주해선안돼 마주해선안돼</span>
+                    <p style="margin: 10px 0;">
+                        <span class="censored">마주해선안돼 마주해선안돼 마주해선안돼 마주해선안돼</span>
+                    <p style="margin: 10px 0;">
+                        <span class="censored">마주해선안돼 마주해선안돼 마주해선안돼 마주해선안돼</span>
+                    <p style="margin: 10px 0;">
+                        <span class="censored">마주해선안돼 마주해선안돼 마주해선안돼 마주해선안돼</span>
+                    <p style="margin: 10px 0;">
+                        <span class="censored">마주해선안돼 마주해선안돼 마주해선안돼 마주해선안돼</span>
+                    </p>
+                </div>
+                
+                <p><span class="censored">배가고프기때문</span></p>
+            </div>
+        </div>
+        
+        <div class="footnote">
+            <div class="footnote-item">[1] 원래 남성이었으나 4번의 성전환 수술을 거쳐 현재는 다시 남성</div>
+            <div class="footnote-item">[2] 음수 신장의 의미에 대해서는 <a href="https://namu.wiki/w/%EB%A7%A4%EC%9E%A5" class="footnote-link"><span class="censored">장례 및 매장 문화</span></a>참조</div>
+            <div class="footnote-item">[3] 자세한 내용은 <a href="https://namu.wiki/w/%EC%8B%9D%EC%9D%B8" class="footnote-link"><span class="censored">식인</span></a> 문서 참조</div>
+        </div>
+        
+        <div style="margin-top: 40px; padding: 20px; background-color: #f8f9fa; border: 1px solid #ddd; text-align: center; color: #666; font-size: 13px;">
+            <p style="margin-top: 10px;">최종 수정: <span class="censored">████년 ██월 ██일</span></p>
+        </div>
+    </div>
+</body>
+</html>
